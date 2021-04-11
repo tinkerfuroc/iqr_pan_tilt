@@ -15,8 +15,7 @@
       <param name="autorepeat_rate" type="double" value="10" />
     </node>
 
-    <node name="pan_tilt_control" pkg="pan_tilt_driver" type="pan_tilt_control.py" output="screen">
-    </node>
+    <node name="pan_tilt_control" pkg="pan_tilt_driver" type="pan_tilt_control.py" output="screen"/> 
   </group>
 
   <include file="$(find pan_tilt_description)/launch/state_publisher.launch" />

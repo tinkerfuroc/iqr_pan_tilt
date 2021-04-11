@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 
 import math
 import rospy
@@ -17,22 +17,22 @@ def joy_callback(data):
     global pan_tilt_yaw, pan_tilt_pitch
 
     # button Y
-    if data.buttons[0]==1 :
+    if data.buttons[3]==1 :
         pan_tilt_pitch -= delta_value
         # rospy.loginfo("up")
 
     # button B
-    if data.buttons[1]==1:
+    if data.buttons[2]==1:
         pan_tilt_yaw -= delta_value
         # rospy.loginfo("right")
 
     # button A
-    if data.buttons[2]==1:
+    if data.buttons[1]==1:
         pan_tilt_pitch += delta_value
         # rospy.loginfo("down")
 
     # button X
-    if data.buttons[3]==1:
+    if data.buttons[0]==1:
         pan_tilt_yaw += delta_value
         # rospy.loginfo("left")
 
@@ -53,9 +53,9 @@ def joy_callback(data):
         pan_tilt_yaw = -60;
 
     command = PanTiltCmd()
-    command.speed = 20.0
-    command.yaw = pan_tilt_yaw
-    command.pitch = pan_tilt_pitch
+    command.speed = int(20.0)
+    command.yaw = int(pan_tilt_yaw)
+    command.pitch = int(pan_tilt_pitch)
 
     publisher.publish(command)
 
