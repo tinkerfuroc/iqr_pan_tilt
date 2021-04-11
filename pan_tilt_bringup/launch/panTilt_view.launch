@@ -17,9 +17,11 @@
 
     <node name="pan_tilt_control" pkg="pan_tilt_driver" type="pan_tilt_control.py" output="screen"/> 
   </group>
-
+  
+  <!--
   <include file="$(find pan_tilt_description)/launch/state_publisher.launch" />
 
   <arg name="rvizconfig" default="$(find pan_tilt_description)/rviz/view_modle.rviz" />
   <node name="rviz" pkg="rviz" type="rviz" args="-d $(arg rvizconfig)" required="true" />
+  -->
 </launch> 
