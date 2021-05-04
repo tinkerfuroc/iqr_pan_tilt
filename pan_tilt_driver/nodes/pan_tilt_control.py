@@ -22,17 +22,17 @@ def joy_callback(data):
         # rospy.loginfo("up")
 
     # button B
-    if data.buttons[2]==1:
+    if data.buttons[1]==1:
         pan_tilt_yaw -= delta_value
         # rospy.loginfo("right")
 
     # button A
-    if data.buttons[1]==1:
+    if data.buttons[0]==1:
         pan_tilt_pitch += delta_value
         # rospy.loginfo("down")
 
     # button X
-    if data.buttons[0]==1:
+    if data.buttons[2]==1:
         pan_tilt_yaw += delta_value
         # rospy.loginfo("left")
 
