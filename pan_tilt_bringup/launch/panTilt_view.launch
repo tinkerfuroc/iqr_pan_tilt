@@ -4,7 +4,7 @@
   <arg name="use_joy" default="false"/>
 
   <node name="pan_tilt_driver_node" pkg="pan_tilt_driver" type="PanTiltDriverNode" output="screen">
-    <param name="port_name" value="/dev/actuators/pantilt"/>
+    <param name="port_name" value="/dev/actuators/pan_tilt"/>
     <param name="yaw_joint_name" value="pan_tilt_yaw_joint"/>
     <param name="pitch_joint_name" value="pan_tilt_pitch_joint"/>
   </node>
